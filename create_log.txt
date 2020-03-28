@@ -1,0 +1,642 @@
+{
+  "error": null,
+  "id": "/subscriptions/56e103e8-ff02-4054-a56a-da45259a4c8b/resourceGroups/SymptomsBot-testing/providers/Microsoft.Resources/deployments/deployment_dry_run",
+  "name": "deployment_dry_run",
+  "properties": {
+    "correlationId": "26e1ce08-d5b2-4443-b0f4-76e855b0b714",
+    "debugSetting": null,
+    "dependencies": [
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/56e103e8-ff02-4054-a56a-da45259a4c8b/resourceGroups/SymptomsBot-testing/providers/Microsoft.Web/serverfarms/SymptomsBot-testing",
+            "resourceGroup": "SymptomsBot-testing",
+            "resourceName": "SymptomsBot-testing",
+            "resourceType": "Microsoft.Web/serverfarms"
+          }
+        ],
+        "id": "/subscriptions/56e103e8-ff02-4054-a56a-da45259a4c8b/resourceGroups/SymptomsBot-testing/providers/Microsoft.Web/sites/SymptomsBot-testing",
+        "resourceGroup": "SymptomsBot-testing",
+        "resourceName": "SymptomsBot-testing",
+        "resourceType": "Microsoft.Web/sites"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/56e103e8-ff02-4054-a56a-da45259a4c8b/resourceGroups/SymptomsBot-testing/providers/Microsoft.Web/sites/SymptomsBot-testing",
+            "resourceGroup": "SymptomsBot-testing",
+            "resourceName": "SymptomsBot-testing",
+            "resourceType": "Microsoft.Web/sites"
+          }
+        ],
+        "id": "/subscriptions/56e103e8-ff02-4054-a56a-da45259a4c8b/resourceGroups/SymptomsBot-testing/providers/Microsoft.BotService/botServices/SymptomsBot",
+        "resourceGroup": "SymptomsBot-testing",
+        "resourceName": "SymptomsBot",
+        "resourceType": "Microsoft.BotService/botServices"
+      }
+    ],
+    "duration": "PT0S",
+    "mode": "Incremental",
+    "onErrorDeployment": null,
+    "outputs": null,
+    "parameters": {
+      "appId": {
+        "type": "String",
+        "value": "2b8b436d-a907-454d-82cb-8b3c4c0b52c6"
+      },
+      "appInsightsLocation": {
+        "type": "String",
+        "value": "westus"
+      },
+      "appInsightsName": {
+        "type": "String",
+        "value": "SymptomsBot-testing"
+      },
+      "appSecret": {
+        "type": "String",
+        "value": "'!SymptomsBot123!'"
+      },
+      "appServicePlanLocation": {
+        "type": "String",
+        "value": "WestUS"
+      },
+      "botId": {
+        "type": "String",
+        "value": "SymptomsBot"
+      },
+      "botSku": {
+        "type": "String",
+        "value": "F0"
+      },
+      "cosmosDbName": {
+        "type": "String",
+        "value": "SymptomsBot-testing"
+      },
+      "existingAppServicePlan": {
+        "type": "String",
+        "value": ""
+      },
+      "location": {
+        "type": "String",
+        "value": "westus"
+      },
+      "luisAuthoringKey": {
+        "type": "String",
+        "value": ""
+      },
+      "luisServiceAuthoringSku": {
+        "type": "String",
+        "value": "F0"
+      },
+      "luisServiceLocation": {
+        "type": "String",
+        "value": "westus"
+      },
+      "luisServiceName": {
+        "type": "String",
+        "value": "SymptomsBot-testing-luis"
+      },
+      "luisServiceRunTimeSku": {
+        "type": "String",
+        "value": "S0"
+      },
+      "name": {
+        "type": "String",
+        "value": "SymptomsBot-testing"
+      },
+      "newAppServicePlanName": {
+        "type": "String",
+        "value": "SymptomsBot-testing"
+      },
+      "newAppServicePlanSku": {
+        "type": "Object",
+        "value": {
+          "capacity": 1,
+          "family": "S",
+          "name": "S1",
+          "size": "S1",
+          "tier": "Standard"
+        }
+      },
+      "newWebAppName": {
+        "type": "String",
+        "value": "SymptomsBot-testing"
+      },
+      "shouldCreateAuthoringResource": {
+        "type": "Bool",
+        "value": true
+      },
+      "storageAccountName": {
+        "type": "String",
+        "value": "SymptomsBot-testing"
+      },
+      "useCosmosDb": {
+        "type": "Bool",
+        "value": true
+      },
+      "useStorage": {
+        "type": "Bool",
+        "value": true
+      }
+    },
+    "parametersLink": null,
+    "providers": [
+      {
+        "id": null,
+        "namespace": "Microsoft.Web",
+        "registrationPolicy": null,
+        "registrationState": null,
+        "resourceTypes": [
+          {
+            "aliases": null,
+            "apiVersions": null,
+            "capabilities": null,
+            "locations": [
+              "westus"
+            ],
+            "properties": null,
+            "resourceType": "serverfarms"
+          },
+          {
+            "aliases": null,
+            "apiVersions": null,
+            "capabilities": null,
+            "locations": [
+              "westus"
+            ],
+            "properties": null,
+            "resourceType": "sites"
+          }
+        ]
+      },
+      {
+        "id": null,
+        "namespace": "Microsoft.DocumentDB",
+        "registrationPolicy": null,
+        "registrationState": null,
+        "resourceTypes": [
+          {
+            "aliases": null,
+            "apiVersions": null,
+            "capabilities": null,
+            "locations": [
+              "westus"
+            ],
+            "properties": null,
+            "resourceType": "databaseAccounts"
+          }
+        ]
+      },
+      {
+        "id": null,
+        "namespace": "Microsoft.BotService",
+        "registrationPolicy": null,
+        "registrationState": null,
+        "resourceTypes": [
+          {
+            "aliases": null,
+            "apiVersions": null,
+            "capabilities": null,
+            "locations": [
+              "global"
+            ],
+            "properties": null,
+            "resourceType": "botServices"
+          }
+        ]
+      },
+      {
+        "id": null,
+        "namespace": "Microsoft.Insights",
+        "registrationPolicy": null,
+        "registrationState": null,
+        "resourceTypes": [
+          {
+            "aliases": null,
+            "apiVersions": null,
+            "capabilities": null,
+            "locations": [
+              "westus"
+            ],
+            "properties": null,
+            "resourceType": "components"
+          }
+        ]
+      },
+      {
+        "id": null,
+        "namespace": "Microsoft.Storage",
+        "registrationPolicy": null,
+        "registrationState": null,
+        "resourceTypes": [
+          {
+            "aliases": null,
+            "apiVersions": null,
+            "capabilities": null,
+            "locations": [
+              "westus"
+            ],
+            "properties": null,
+            "resourceType": "storageAccounts"
+          }
+        ]
+      },
+      {
+        "id": null,
+        "namespace": "Microsoft.CognitiveServices",
+        "registrationPolicy": null,
+        "registrationState": null,
+        "resourceTypes": [
+          {
+            "aliases": null,
+            "apiVersions": null,
+            "capabilities": null,
+            "locations": [
+              "westus"
+            ],
+            "properties": null,
+            "resourceType": "accounts"
+          }
+        ]
+      }
+    ],
+    "provisioningState": "Succeeded",
+    "template": null,
+    "templateHash": "1828911997243188658",
+    "templateLink": null,
+    "timestamp": "2020-03-28T10:47:50.487136+00:00",
+    "validatedResources": [
+      {
+        "id": "/subscriptions/56e103e8-ff02-4054-a56a-da45259a4c8b/resourceGroups/SymptomsBot-testing/providers/Microsoft.Web/serverfarms/SymptomsBot-testing",
+        "resourceGroup": "SymptomsBot-testing"
+      },
+      {
+        "id": "/subscriptions/56e103e8-ff02-4054-a56a-da45259a4c8b/resourceGroups/SymptomsBot-testing/providers/Microsoft.Web/sites/SymptomsBot-testing",
+        "resourceGroup": "SymptomsBot-testing"
+      },
+      {
+        "id": "/subscriptions/56e103e8-ff02-4054-a56a-da45259a4c8b/resourceGroups/SymptomsBot-testing/providers/Microsoft.DocumentDB/databaseAccounts/symptomsbot-testing",
+        "resourceGroup": "SymptomsBot-testing"
+      },
+      {
+        "id": "/subscriptions/56e103e8-ff02-4054-a56a-da45259a4c8b/resourceGroups/SymptomsBot-testing/providers/Microsoft.BotService/botServices/SymptomsBot",
+        "resourceGroup": "SymptomsBot-testing"
+      },
+      {
+        "id": "/subscriptions/56e103e8-ff02-4054-a56a-da45259a4c8b/resourceGroups/SymptomsBot-testing/providers/Microsoft.Insights/components/SymptomsBot-testing",
+        "resourceGroup": "SymptomsBot-testing"
+      },
+      {
+        "id": "/subscriptions/56e103e8-ff02-4054-a56a-da45259a4c8b/resourceGroups/SymptomsBot-testing/providers/Microsoft.Storage/storageAccounts/symptomsbottesting",
+        "resourceGroup": "SymptomsBot-testing"
+      },
+      {
+        "id": "/subscriptions/56e103e8-ff02-4054-a56a-da45259a4c8b/resourceGroups/SymptomsBot-testing/providers/Microsoft.CognitiveServices/accounts/SymptomsBot-testing-luis-Authoring",
+        "resourceGroup": "SymptomsBot-testing"
+      },
+      {
+        "id": "/subscriptions/56e103e8-ff02-4054-a56a-da45259a4c8b/resourceGroups/SymptomsBot-testing/providers/Microsoft.CognitiveServices/accounts/SymptomsBot-testing-luis",
+        "resourceGroup": "SymptomsBot-testing"
+      }
+    ]
+  },
+  "resourceGroup": "SymptomsBot-testing",
+  "type": "Microsoft.Resources/deployments"
+}
+This command is implicitly deprecated because command group 'group deployment' is deprecated and will be removed in a future release. Use 'deployment group' instead.
+{
+  "id": "/subscriptions/56e103e8-ff02-4054-a56a-da45259a4c8b/resourceGroups/SymptomsBot-testing/providers/Microsoft.Resources/deployments/03282020204739",
+  "location": null,
+  "name": "03282020204739",
+  "properties": {
+    "correlationId": "f0020a41-4591-4f5d-a34c-e841c264d8c8",
+    "debugSetting": null,
+    "dependencies": [
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/56e103e8-ff02-4054-a56a-da45259a4c8b/resourceGroups/SymptomsBot-testing/providers/Microsoft.Web/serverfarms/SymptomsBot-testing",
+            "resourceGroup": "SymptomsBot-testing",
+            "resourceName": "SymptomsBot-testing",
+            "resourceType": "Microsoft.Web/serverfarms"
+          }
+        ],
+        "id": "/subscriptions/56e103e8-ff02-4054-a56a-da45259a4c8b/resourceGroups/SymptomsBot-testing/providers/Microsoft.Web/sites/SymptomsBot-testing",
+        "resourceGroup": "SymptomsBot-testing",
+        "resourceName": "SymptomsBot-testing",
+        "resourceType": "Microsoft.Web/sites"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/56e103e8-ff02-4054-a56a-da45259a4c8b/resourceGroups/SymptomsBot-testing/providers/Microsoft.Web/sites/SymptomsBot-testing",
+            "resourceGroup": "SymptomsBot-testing",
+            "resourceName": "SymptomsBot-testing",
+            "resourceType": "Microsoft.Web/sites"
+          }
+        ],
+        "id": "/subscriptions/56e103e8-ff02-4054-a56a-da45259a4c8b/resourceGroups/SymptomsBot-testing/providers/Microsoft.BotService/botServices/SymptomsBot",
+        "resourceGroup": "SymptomsBot-testing",
+        "resourceName": "SymptomsBot",
+        "resourceType": "Microsoft.BotService/botServices"
+      }
+    ],
+    "duration": "PT12M12.7734555S",
+    "mode": "Incremental",
+    "onErrorDeployment": null,
+    "outputResources": [
+      {
+        "id": "/subscriptions/56e103e8-ff02-4054-a56a-da45259a4c8b/resourceGroups/SymptomsBot-testing/providers/Microsoft.BotService/botServices/SymptomsBot",
+        "resourceGroup": "SymptomsBot-testing"
+      },
+      {
+        "id": "/subscriptions/56e103e8-ff02-4054-a56a-da45259a4c8b/resourceGroups/SymptomsBot-testing/providers/Microsoft.CognitiveServices/accounts/SymptomsBot-testing-luis",
+        "resourceGroup": "SymptomsBot-testing"
+      },
+      {
+        "id": "/subscriptions/56e103e8-ff02-4054-a56a-da45259a4c8b/resourceGroups/SymptomsBot-testing/providers/Microsoft.CognitiveServices/accounts/SymptomsBot-testing-luis-Authoring",
+        "resourceGroup": "SymptomsBot-testing"
+      },
+      {
+        "id": "/subscriptions/56e103e8-ff02-4054-a56a-da45259a4c8b/resourceGroups/SymptomsBot-testing/providers/Microsoft.DocumentDB/databaseAccounts/symptomsbot-testing",
+        "resourceGroup": "SymptomsBot-testing"
+      },
+      {
+        "id": "/subscriptions/56e103e8-ff02-4054-a56a-da45259a4c8b/resourceGroups/SymptomsBot-testing/providers/Microsoft.Insights/components/SymptomsBot-testing",
+        "resourceGroup": "SymptomsBot-testing"
+      },
+      {
+        "id": "/subscriptions/56e103e8-ff02-4054-a56a-da45259a4c8b/resourceGroups/SymptomsBot-testing/providers/Microsoft.Storage/storageAccounts/symptomsbottesting",
+        "resourceGroup": "SymptomsBot-testing"
+      },
+      {
+        "id": "/subscriptions/56e103e8-ff02-4054-a56a-da45259a4c8b/resourceGroups/SymptomsBot-testing/providers/Microsoft.Web/serverfarms/SymptomsBot-testing",
+        "resourceGroup": "SymptomsBot-testing"
+      },
+      {
+        "id": "/subscriptions/56e103e8-ff02-4054-a56a-da45259a4c8b/resourceGroups/SymptomsBot-testing/providers/Microsoft.Web/sites/SymptomsBot-testing",
+        "resourceGroup": "SymptomsBot-testing"
+      }
+    ],
+    "outputs": {
+      "applicationInsights": {
+        "type": "Object",
+        "value": {
+          "InstrumentationKey": "c6146d28-867d-4144-bb80-2a4aa543a68c"
+        }
+      },
+      "blobStorage": {
+        "type": "Object",
+        "value": {
+          "connectionString": "DefaultEndpointsProtocol=https;AccountName=symptomsbottesting;AccountKey=whlJDJL9Q8ZBzz9HagmhAVS/FDEFK1YQrSCB8zsVdI7yLkOr+aX3p6NGouTzkOIK5v9mfamUQLyBvV5QeW7xVw==;EndpointSuffix=core.windows.net",
+          "container": "transcripts"
+        }
+      },
+      "cosmosDb": {
+        "type": "Object",
+        "value": {
+          "authKey": "dO3BmtWgc1z8sVGpryy9cIFioV3seumdmKyysD5ltPupopZZsRT2gvy4mjsBFAzZQ73Xyh0Ps7b81xOdQTfhsQ==",
+          "collectionId": "botstate-collection",
+          "cosmosDBEndpoint": "https://symptomsbot-testing.documents.azure.com:443/",
+          "databaseId": "botstate-db"
+        }
+      },
+      "luis": {
+        "type": "Object",
+        "value": {
+          "authoringKey": "c336f2fb5509410f8efca5bf8bf52aad",
+          "endpointKey": "c10de20564ef462faef14f477f893a71",
+          "region": "westus"
+        }
+      }
+    },
+    "parameters": {
+      "appId": {
+        "type": "String",
+        "value": "2b8b436d-a907-454d-82cb-8b3c4c0b52c6"
+      },
+      "appInsightsLocation": {
+        "type": "String",
+        "value": "westus"
+      },
+      "appInsightsName": {
+        "type": "String",
+        "value": "SymptomsBot-testing"
+      },
+      "appSecret": {
+        "type": "String",
+        "value": "'!SymptomsBot123!'"
+      },
+      "appServicePlanLocation": {
+        "type": "String",
+        "value": "WestUS"
+      },
+      "botId": {
+        "type": "String",
+        "value": "SymptomsBot"
+      },
+      "botSku": {
+        "type": "String",
+        "value": "F0"
+      },
+      "cosmosDbName": {
+        "type": "String",
+        "value": "SymptomsBot-testing"
+      },
+      "existingAppServicePlan": {
+        "type": "String",
+        "value": ""
+      },
+      "location": {
+        "type": "String",
+        "value": "westus"
+      },
+      "luisAuthoringKey": {
+        "type": "String",
+        "value": ""
+      },
+      "luisServiceAuthoringSku": {
+        "type": "String",
+        "value": "F0"
+      },
+      "luisServiceLocation": {
+        "type": "String",
+        "value": "westus"
+      },
+      "luisServiceName": {
+        "type": "String",
+        "value": "SymptomsBot-testing-luis"
+      },
+      "luisServiceRunTimeSku": {
+        "type": "String",
+        "value": "S0"
+      },
+      "name": {
+        "type": "String",
+        "value": "SymptomsBot-testing"
+      },
+      "newAppServicePlanName": {
+        "type": "String",
+        "value": "SymptomsBot-testing"
+      },
+      "newAppServicePlanSku": {
+        "type": "Object",
+        "value": {
+          "capacity": 1,
+          "family": "S",
+          "name": "S1",
+          "size": "S1",
+          "tier": "Standard"
+        }
+      },
+      "newWebAppName": {
+        "type": "String",
+        "value": "SymptomsBot-testing"
+      },
+      "shouldCreateAuthoringResource": {
+        "type": "Bool",
+        "value": true
+      },
+      "storageAccountName": {
+        "type": "String",
+        "value": "SymptomsBot-testing"
+      },
+      "useCosmosDb": {
+        "type": "Bool",
+        "value": true
+      },
+      "useStorage": {
+        "type": "Bool",
+        "value": true
+      }
+    },
+    "parametersLink": null,
+    "providers": [
+      {
+        "id": null,
+        "namespace": "Microsoft.Web",
+        "registrationPolicy": null,
+        "registrationState": null,
+        "resourceTypes": [
+          {
+            "aliases": null,
+            "apiVersions": null,
+            "capabilities": null,
+            "locations": [
+              "westus"
+            ],
+            "properties": null,
+            "resourceType": "serverfarms"
+          },
+          {
+            "aliases": null,
+            "apiVersions": null,
+            "capabilities": null,
+            "locations": [
+              "westus"
+            ],
+            "properties": null,
+            "resourceType": "sites"
+          }
+        ]
+      },
+      {
+        "id": null,
+        "namespace": "Microsoft.DocumentDB",
+        "registrationPolicy": null,
+        "registrationState": null,
+        "resourceTypes": [
+          {
+            "aliases": null,
+            "apiVersions": null,
+            "capabilities": null,
+            "locations": [
+              "westus"
+            ],
+            "properties": null,
+            "resourceType": "databaseAccounts"
+          }
+        ]
+      },
+      {
+        "id": null,
+        "namespace": "Microsoft.BotService",
+        "registrationPolicy": null,
+        "registrationState": null,
+        "resourceTypes": [
+          {
+            "aliases": null,
+            "apiVersions": null,
+            "capabilities": null,
+            "locations": [
+              "global"
+            ],
+            "properties": null,
+            "resourceType": "botServices"
+          }
+        ]
+      },
+      {
+        "id": null,
+        "namespace": "Microsoft.Insights",
+        "registrationPolicy": null,
+        "registrationState": null,
+        "resourceTypes": [
+          {
+            "aliases": null,
+            "apiVersions": null,
+            "capabilities": null,
+            "locations": [
+              "westus"
+            ],
+            "properties": null,
+            "resourceType": "components"
+          }
+        ]
+      },
+      {
+        "id": null,
+        "namespace": "Microsoft.Storage",
+        "registrationPolicy": null,
+        "registrationState": null,
+        "resourceTypes": [
+          {
+            "aliases": null,
+            "apiVersions": null,
+            "capabilities": null,
+            "locations": [
+              "westus"
+            ],
+            "properties": null,
+            "resourceType": "storageAccounts"
+          }
+        ]
+      },
+      {
+        "id": null,
+        "namespace": "Microsoft.CognitiveServices",
+        "registrationPolicy": null,
+        "registrationState": null,
+        "resourceTypes": [
+          {
+            "aliases": null,
+            "apiVersions": null,
+            "capabilities": null,
+            "locations": [
+              "westus"
+            ],
+            "properties": null,
+            "resourceType": "accounts"
+          }
+        ]
+      }
+    ],
+    "provisioningState": "Succeeded",
+    "template": null,
+    "templateHash": "1828911997243188658",
+    "templateLink": null,
+    "timestamp": "2020-03-28T11:00:11.347223+00:00"
+  },
+  "resourceGroup": "SymptomsBot-testing",
+  "type": "Microsoft.Resources/deployments"
+}

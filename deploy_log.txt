@@ -1,0 +1,13 @@
+Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Core
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+C:\composer\SymptomsBot\BotProject.csproj : warning NU1701: Package 'Microsoft.Azure.KeyVault.Core 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project. [C:\composer\SymptomsBot\BotProject.sln]
+C:\composer\SymptomsBot\Tests\Tests.csproj : warning NU1701: Package 'Microsoft.Azure.KeyVault.Core 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project. [C:\composer\SymptomsBot\BotProject.sln]
+C:\composer\SymptomsBot\Tests\Tests.csproj : warning NU1701: Package 'Microsoft.Azure.KeyVault.Core 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.
+C:\composer\SymptomsBot\BotProject.csproj : warning NU1701: Package 'Microsoft.Azure.KeyVault.Core 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.
+BotSettings.cs(17,16): warning CS0618: 'CosmosDbStorageOptions' is obsolete: 'This class is deprecated. Please use CosmosDbPartitionedStorageOptions with CosmosDbPartitionedStorage instead.' [C:\composer\SymptomsBot\BotProject.csproj]
+Startup.cs(68,31): warning CS0618: 'CosmosDbStorage' is obsolete: 'This class is deprecated. Please use CosmosDbPartitionedStorage instead.' [C:\composer\SymptomsBot\BotProject.csproj]
+ComposerBot.cs(23,37): warning CS0169: The field 'ComposerBot.sourceMap' is never used [C:\composer\SymptomsBot\BotProject.csproj]
+WARNING: Getting scm site credentials for zip deployment
+WARNING: Starting zip deployment. This operation can take a while to complete ...
+WARNING: Deployment endpoint responded with status code 202
