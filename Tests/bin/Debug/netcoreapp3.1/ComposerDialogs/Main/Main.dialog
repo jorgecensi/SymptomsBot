@@ -1,0 +1,329 @@
+{
+  "$type": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "$designer": {
+      "name": "SymptomsBot",
+      "id": "293544"
+    }
+  },
+  "autoEndDialog": "true",
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$type": "Microsoft.OnConversationUpdateActivity",
+      "$designer": {
+        "id": "376720"
+      },
+      "actions": [
+        {
+          "$type": "Microsoft.Foreach",
+          "$designer": {
+            "id": "518944",
+            "name": "Loop: for each item"
+          },
+          "itemsProperty": "turn.Activity.membersAdded",
+          "actions": [
+            {
+              "$type": "Microsoft.IfCondition",
+              "$designer": {
+                "id": "641773",
+                "name": "Branch: if/else"
+              },
+              "condition": "string(dialog.foreach.value.id) != string(turn.Activity.Recipient.id)",
+              "actions": [
+                {
+                  "$type": "Microsoft.ChoiceInput",
+                  "$designer": {
+                    "id": "586936",
+                    "name": "Multiple choice"
+                  },
+                  "prompt": "${bfdprompt-586936()}",
+                  "maxTurnCount": "3",
+                  "property": "user.feeling",
+                  "allowInterruptions": "false",
+                  "outputFormat": "value",
+                  "choices": [
+                    {
+                      "value": "good"
+                    },
+                    {
+                      "value": "not good",
+                      "synonyms": [
+                        "bad"
+                      ]
+                    }
+                  ],
+                  "appendChoices": "true",
+                  "defaultLocale": "en-us",
+                  "style": "SuggestedAction",
+                  "choiceOptions": {
+                    "inlineSeparator": ", ",
+                    "inlineOr": " or ",
+                    "inlineOrMore": ", or ",
+                    "includeNumbers": true
+                  },
+                  "recognizerOptions": {
+                    "noValue": false
+                  }
+                },
+                {
+                  "$type": "Microsoft.IfCondition",
+                  "$designer": {
+                    "id": "153436",
+                    "name": "Branch: if/else"
+                  },
+                  "condition": "user.feeling == \"not good\"",
+                  "elseActions": [
+                    {
+                      "$type": "Microsoft.SendActivity",
+                      "$designer": {
+                        "id": "793180",
+                        "name": "Send a response"
+                      },
+                      "activity": "${bfdactivity-793180()}"
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "$type": "Microsoft.ConfirmInput",
+                      "$designer": {
+                        "id": "453727",
+                        "name": "Confirmation"
+                      },
+                      "prompt": "${bfdprompt-453727()}",
+                      "maxTurnCount": "3",
+                      "property": "user.hasfever",
+                      "allowInterruptions": "false",
+                      "defaultLocale": "en-us",
+                      "style": "Auto",
+                      "choiceOptions": {
+                        "inlineSeparator": ", ",
+                        "inlineOr": " or ",
+                        "inlineOrMore": ", or ",
+                        "includeNumbers": true
+                      },
+                      "confirmChoices": [
+                        {
+                          "value": "Yes"
+                        },
+                        {
+                          "value": "No"
+                        }
+                      ]
+                    },
+                    {
+                      "$type": "Microsoft.IfCondition",
+                      "$designer": {
+                        "id": "992368",
+                        "name": "Branch: if/else"
+                      },
+                      "condition": "user.hasfever",
+                      "actions": [
+                        {
+                          "$type": "Microsoft.NumberInput",
+                          "$designer": {
+                            "id": "679724",
+                            "name": "Number input"
+                          },
+                          "prompt": "${bfdprompt-679724()}",
+                          "maxTurnCount": "3",
+                          "property": "user.temperature",
+                          "allowInterruptions": "false",
+                          "defaultLocale": "en-us"
+                        }
+                      ]
+                    },
+                    {
+                      "$type": "Microsoft.ConfirmInput",
+                      "$designer": {
+                        "id": "408108",
+                        "name": "Confirmation"
+                      },
+                      "prompt": "${bfdprompt-408108()}",
+                      "maxTurnCount": "3",
+                      "property": "user.hascough",
+                      "allowInterruptions": "false",
+                      "defaultLocale": "en-us",
+                      "style": "Auto",
+                      "choiceOptions": {
+                        "inlineSeparator": ", ",
+                        "inlineOr": " or ",
+                        "inlineOrMore": ", or ",
+                        "includeNumbers": true
+                      },
+                      "confirmChoices": [
+                        {
+                          "value": "Yes"
+                        },
+                        {
+                          "value": "No"
+                        }
+                      ]
+                    },
+                    {
+                      "$type": "Microsoft.IfCondition",
+                      "$designer": {
+                        "id": "153851",
+                        "name": "Branch: if/else"
+                      },
+                      "condition": "user.hascough",
+                      "actions": [
+                        {
+                          "$type": "Microsoft.ChoiceInput",
+                          "$designer": {
+                            "id": "810921",
+                            "name": "Multiple choice"
+                          },
+                          "prompt": "${bfdprompt-810921()}",
+                          "maxTurnCount": "3",
+                          "property": "user.coughintensity",
+                          "allowInterruptions": "false",
+                          "outputFormat": "value",
+                          "choices": [
+                            {
+                              "value": "Mild"
+                            },
+                            {
+                              "value": "Moderate"
+                            },
+                            {
+                              "value": "Severe"
+                            }
+                          ],
+                          "appendChoices": "true",
+                          "defaultLocale": "en-us",
+                          "style": "Auto",
+                          "choiceOptions": {
+                            "inlineSeparator": ", ",
+                            "inlineOr": " or ",
+                            "inlineOrMore": ", or ",
+                            "includeNumbers": true
+                          },
+                          "recognizerOptions": {
+                            "noValue": false
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "$type": "Microsoft.ConfirmInput",
+                      "$designer": {
+                        "id": "521443",
+                        "name": "Confirmation"
+                      },
+                      "prompt": "${bfdprompt-521443()}",
+                      "maxTurnCount": "3",
+                      "property": "user.hasfatigue",
+                      "allowInterruptions": "false",
+                      "defaultLocale": "en-us",
+                      "style": "Auto",
+                      "choiceOptions": {
+                        "inlineSeparator": ", ",
+                        "inlineOr": " or ",
+                        "inlineOrMore": ", or ",
+                        "includeNumbers": true
+                      },
+                      "confirmChoices": [
+                        {
+                          "value": "Yes"
+                        },
+                        {
+                          "value": "No"
+                        }
+                      ]
+                    },
+                    {
+                      "$type": "Microsoft.ConfirmInput",
+                      "$designer": {
+                        "id": "119256",
+                        "name": "Confirmation"
+                      },
+                      "prompt": "${bfdprompt-119256()}",
+                      "maxTurnCount": "3",
+                      "property": "user.traveled",
+                      "allowInterruptions": "false",
+                      "defaultLocale": "en-us",
+                      "style": "Auto",
+                      "choiceOptions": {
+                        "inlineSeparator": ", ",
+                        "inlineOr": " or ",
+                        "inlineOrMore": ", or ",
+                        "includeNumbers": true
+                      }
+                    },
+                    {
+                      "$type": "Microsoft.IfCondition",
+                      "$designer": {
+                        "id": "033311",
+                        "name": "Branch: if/else"
+                      },
+                      "condition": "user.traveled",
+                      "actions": [
+                        {
+                          "$type": "Microsoft.TextInput",
+                          "$designer": {
+                            "id": "505487",
+                            "name": "Text input"
+                          },
+                          "prompt": "${bfdprompt-505487()}",
+                          "maxTurnCount": "3",
+                          "property": "user.camefrom",
+                          "allowInterruptions": "false"
+                        }
+                      ]
+                    },
+                    {
+                      "$type": "Microsoft.IfCondition",
+                      "$designer": {
+                        "id": "863628",
+                        "name": "Branch: if/else"
+                      },
+                      "condition": "user.hasfever && user.hascough && user.hasfatigue && user.traveled",
+                      "actions": [
+                        {
+                          "$type": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "864412",
+                            "name": "Send a response"
+                          },
+                          "activity": "${bfdactivity-864412()}"
+                        }
+                      ],
+                      "elseActions": [
+                        {
+                          "$type": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "341010",
+                            "name": "Send a response"
+                          },
+                          "activity": "${bfdactivity-341010()}"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "$type": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "013415",
+                    "name": "Send a response"
+                  },
+                  "activity": "${bfdactivity-013415()}"
+                },
+                {
+                  "$type": "Microsoft.EndDialog",
+                  "$designer": {
+                    "id": "008278",
+                    "name": "End this dialog"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "$schema": "https://raw.githubusercontent.com/microsoft/BotFramework-Composer/stable/Composer/packages/server/schemas/sdk.schema",
+  "generator": "Main.lg"
+}
