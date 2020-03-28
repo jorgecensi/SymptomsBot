@@ -54,7 +54,7 @@
                     }
                   ],
                   "appendChoices": "true",
-                  "defaultLocale": "en-us",
+                  "defaultLocale": "en-AU",
                   "style": "SuggestedAction",
                   "choiceOptions": {
                     "inlineSeparator": ", ",
@@ -94,7 +94,7 @@
                       "maxTurnCount": "3",
                       "property": "user.hasfever",
                       "allowInterruptions": "false",
-                      "defaultLocale": "en-us",
+                      "defaultLocale": "en-AU",
                       "style": "Auto",
                       "choiceOptions": {
                         "inlineSeparator": ", ",
@@ -129,7 +129,7 @@
                           "maxTurnCount": "3",
                           "property": "user.temperature",
                           "allowInterruptions": "false",
-                          "defaultLocale": "en-us"
+                          "defaultLocale": "en-AU"
                         }
                       ]
                     },
@@ -143,7 +143,7 @@
                       "maxTurnCount": "3",
                       "property": "user.hascough",
                       "allowInterruptions": "false",
-                      "defaultLocale": "en-us",
+                      "defaultLocale": "en-AU",
                       "style": "Auto",
                       "choiceOptions": {
                         "inlineSeparator": ", ",
@@ -191,7 +191,7 @@
                             }
                           ],
                           "appendChoices": "true",
-                          "defaultLocale": "en-us",
+                          "defaultLocale": "en-AU",
                           "style": "Auto",
                           "choiceOptions": {
                             "inlineSeparator": ", ",
@@ -215,7 +215,7 @@
                       "maxTurnCount": "3",
                       "property": "user.hasfatigue",
                       "allowInterruptions": "false",
-                      "defaultLocale": "en-us",
+                      "defaultLocale": "en-AU",
                       "style": "Auto",
                       "choiceOptions": {
                         "inlineSeparator": ", ",
@@ -242,7 +242,7 @@
                       "maxTurnCount": "3",
                       "property": "user.traveled",
                       "allowInterruptions": "false",
-                      "defaultLocale": "en-us",
+                      "defaultLocale": "en-AU",
                       "style": "Auto",
                       "choiceOptions": {
                         "inlineSeparator": ", ",
